@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<!-- saved from url=(0013)about:internet -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VCC Listing</title>
+  <script type="module" src="https://unpkg.com/@fluentui/web-components"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="col align-items-center content">
+    <div id="listingInfo" class="col mb-4 w-100 align-items-center">
+      <h1>
+        NAT 0.3.0 - VPM Repos List
+      </h1>
+        <div class="caption1 mb-2">A list of VPM Repositories for NAT 0.3.0</div>
+      <div class="col align-items-center">
+        <div class="caption1 mb-2" id="publishedByText">Discord : Neuru#3455</a></div>
+      </div>
+    </div>
+    <div class="addToVccBlock mt-4 row align-items-center">
+      <fluent-tooltip id="urlBarHelpTooltip" anchor="urlBarHelp">
+        How to add a listing to your VCC
+      </fluent-tooltip>
+      <fluent-button id="urlBarHelp" appearance="stealth" class="ms-2">
+        <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 4V16C4 17.1046 4.89543 18 6 18H15.5C15.7761 18 16 17.7761 16 17.5C16 17.2239 15.7761 17 15.5 17H6C5.44772 17 5 16.5523 5 16H15C15.5523 16 16 15.5523 16 15V4C16 2.89543 15.1046 2 14 2H6C4.89543 2 4 2.89543 4 4ZM14 3C14.5523 3 15 3.44772 15 4V15H5V4C5 3.44772 5.44772 3 6 3H14ZM8.76069 6.40877C8.95015 6.21142 9.31074 6 10 6C10.6893 6 11.0499 6.21142 11.2393 6.40877C11.4409 6.61877 11.5 6.86546 11.5 7C11.5 7.4539 11.2301 7.69835 10.7773 7.92363C10.6657 7.97916 10.552 8.02883 10.4343 8.0797L10.4116 8.08953C10.3056 8.13534 10.1902 8.18521 10.088 8.23655C9.98257 8.28953 9.85193 8.36283 9.7433 8.46505C9.62799 8.57355 9.5 8.75189 9.5 9V9.99999C9.5 10.2761 9.72386 10.5 10 10.5C10.2761 10.5 10.5 10.2753 10.5 9.99918V9.1493C10.5111 9.14333 10.5234 9.13694 10.537 9.13009C10.6125 9.09217 10.703 9.05302 10.8197 9.00257L10.8313 8.99753C10.948 8.94704 11.0843 8.8878 11.2227 8.81894C11.7699 8.5467 12.5 8.0461 12.5 7C12.5 6.63454 12.3591 6.13123 11.9607 5.71623C11.5501 5.28858 10.9107 5 10 5C9.08926 5 8.44985 5.28858 8.03931 5.71623C7.64091 6.13123 7.5 6.63454 7.5 7C7.5 7.27614 7.72386 7.5 8 7.5C8.27614 7.5 8.5 7.27614 8.5 7C8.5 6.86546 8.55909 6.61877 8.76069 6.40877ZM10 13C10.4142 13 10.75 12.6642 10.75 12.25C10.75 11.8358 10.4142 11.5 10 11.5C9.58579 11.5 9.25 11.8358 9.25 12.25C9.25 12.6642 9.58579 13 10 13Z" />
+        </svg>
+      </fluent-button>
+    </div>
+    <fluent-dialog id="addListingToVccHelp" hidden modal>
+      <div class="col ps-5 pe-4">
+        <div class="row align-items-center justify-content-end mt-4 mb-3">
+          <fluent-button appearance="stealth" id="addListingToVccHelpClose">
+            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.08859 4.21569L4.14645 4.14645C4.32001 3.97288 4.58944 3.9536 4.78431 4.08859L4.85355 4.14645L10 9.293L15.1464 4.14645C15.32 3.97288 15.5894 3.9536 15.7843 4.08859L15.8536 4.14645C16.0271 4.32001 16.0464 4.58944 15.9114 4.78431L15.8536 4.85355L10.707 10L15.8536 15.1464C16.0271 15.32 16.0464 15.5894 15.9114 15.7843L15.8536 15.8536C15.68 16.0271 15.4106 16.0464 15.2157 15.9114L15.1464 15.8536L10 10.707L4.85355 15.8536C4.67999 16.0271 4.41056 16.0464 4.21569 15.9114L4.14645 15.8536C3.97288 15.68 3.9536 15.4106 4.08859 15.2157L4.14645 15.1464L9.293 10L4.14645 4.85355C3.97288 4.67999 3.9536 4.41056 4.08859 4.21569L4.14645 4.14645L4.08859 4.21569Z" />
+              </svg>
+          </fluent-button>
+        </div>
+        <div class="row align-items-center justify-content-center mb-5 me-5">
+            <svg class="me-2" style="fill: var(--neutral-foreground-rest)" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 4V16C4 17.1046 4.89543 18 6 18H15.5C15.7761 18 16 17.7761 16 17.5C16 17.2239 15.7761 17 15.5 17H6C5.44772 17 5 16.5523 5 16H15C15.5523 16 16 15.5523 16 15V4C16 2.89543 15.1046 2 14 2H6C4.89543 2 4 2.89543 4 4ZM14 3C14.5523 3 15 3.44772 15 4V15H5V4C5 3.44772 5.44772 3 6 3H14ZM8.76069 6.40877C8.95015 6.21142 9.31074 6 10 6C10.6893 6 11.0499 6.21142 11.2393 6.40877C11.4409 6.61877 11.5 6.86546 11.5 7C11.5 7.4539 11.2301 7.69835 10.7773 7.92363C10.6657 7.97916 10.552 8.02883 10.4343 8.0797L10.4116 8.08953C10.3056 8.13534 10.1902 8.18521 10.088 8.23655C9.98257 8.28953 9.85193 8.36283 9.7433 8.46505C9.62799 8.57355 9.5 8.75189 9.5 9V9.99999C9.5 10.2761 9.72386 10.5 10 10.5C10.2761 10.5 10.5 10.2753 10.5 9.99918V9.1493C10.5111 9.14333 10.5234 9.13694 10.537 9.13009C10.6125 9.09217 10.703 9.05302 10.8197 9.00257L10.8313 8.99753C10.948 8.94704 11.0843 8.8878 11.2227 8.81894C11.7699 8.5467 12.5 8.0461 12.5 7C12.5 6.63454 12.3591 6.13123 11.9607 5.71623C11.5501 5.28858 10.9107 5 10 5C9.08926 5 8.44985 5.28858 8.03931 5.71623C7.64091 6.13123 7.5 6.63454 7.5 7C7.5 7.27614 7.72386 7.5 8 7.5C8.27614 7.5 8.5 7.27614 8.5 7C8.5 6.86546 8.55909 6.61877 8.76069 6.40877ZM10 13C10.4142 13 10.75 12.6642 10.75 12.25C10.75 11.8358 10.4142 11.5 10 11.5C9.58579 11.5 9.25 11.8358 9.25 12.25C9.25 12.6642 9.58579 13 10 13Z" />
+            </svg>
+            <h3 class="m-0">이 리포지토리들을 VCC에 어떻게 추가하나요?</h3> 
+        </div>
+        <p class="mb-1">
+          이 리포지토리들을 VCC(VRCHAT Creator Companion)에 추가하려면 다음 절차를 수행하세요
+        </p>
+        <ul class="mt-1 ps-5">
+          <li class="mb-2">VRChat 공식 홈페이지에서 최신버전의 VCC를 설치하거나 업데이트 후 실행시킨다</li>
+          <li class="mb-2">추가할 리포지토리의 "Add to VCC" 버튼을 클릭한다</li>
+          <li class="mb-2">리포지토리 정보를 확인 후 "I Understand, Add Repository" 버튼을 클릭한다</li>
+          <li class="mb-2">수동으로 추가하려는 경우, 추가할 리포지토리의 "Copy" 버튼을 클릭한다</li>
+          <li class="mb-2">VCC 설정창의 Packages 탭 우측 상단의 "Add Repository" 버튼을 클릭한다</li>
+          <li class="mb-2">아래에 나타나는 URL 필드에 복사한 링크를 붙여넣고 "Add" 버튼을 클릭한다</li>
+          <li class="mb-2">리포지토리 정보를 확인 후 "I Understand, Add Repository" 버튼을 클릭한다</li>
+        </ul>
+      </div>
+    </fluent-dialog>
+    <div class="searchBlock">
+      <fluent-text-field id="searchInput" placeholder="Search Repos..." type="text" autoFocus></fluent-text-field>
+    </div>
+    <fluent-dialog id="packageInfoModal" hidden modal>
+      <div class="col ps-4 pe-4">
+        <div class="row align-items-center justify-content-between mt-3 mb-4">
+          <div class="col">
+            <h3 class="m-0 mb-1" id="packageInfoName">Package Name</h3>
+            <div class="row">
+              <div class="caption1" id="packageInfoId">com.package.id</div>
+            </div>
+          </div>
+          <fluent-button appearance="stealth" id="packageInfoModalClose">
+            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.08859 4.21569L4.14645 4.14645C4.32001 3.97288 4.58944 3.9536 4.78431 4.08859L4.85355 4.14645L10 9.293L15.1464 4.14645C15.32 3.97288 15.5894 3.9536 15.7843 4.08859L15.8536 4.14645C16.0271 4.32001 16.0464 4.58944 15.9114 4.78431L15.8536 4.85355L10.707 10L15.8536 15.1464C16.0271 15.32 16.0464 15.5894 15.9114 15.7843L15.8536 15.8536C15.68 16.0271 15.4106 16.0464 15.2157 15.9114L15.1464 15.8536L10 10.707L4.85355 15.8536C4.67999 16.0271 4.41056 16.0464 4.21569 15.9114L4.14645 15.8536C3.97288 15.68 3.9536 15.4106 4.08859 15.2157L4.14645 15.1464L9.293 10L4.14645 4.85355C3.97288 4.67999 3.9536 4.41056 4.08859 4.21569L4.14645 4.14645L4.08859 4.21569Z" />
+              </svg>
+          </fluent-button>
+        </div>
+        <h5 class="m-0">Repository Info</h5>
+        <p class="mb-4 mt-1" id="packageInfoDescription">
+          Package Description
+        </p>
+        <h5 class="m-0">Author</h5>
+        <p class="mb-4 mt-1">
+          <a href="#" target="_blank" id="packageInfoAuthor">
+            Author Name
+          </a>
+        </p>
+        <h5 class="m-0 mb-2">Dependencies</h5>
+        <ul class="mt-1 ps-5" id="packageInfoDependencies">
+        </ul>
+        <div class="col">
+          <h5 class="m-0 mb-2">Keywords</h5>
+          <div class="mb-2 mt-1 row" id="packageInfoKeywords">
+          </div>
+        </div>
+        <div class="col">
+          <h5 class="m-0">Packages Info</h5>
+          <p class="mb-4 mt-1" id="packagesInfo">
+            Packages Info
+          </p>
+        </div>
+      </div>
+    </fluent-dialog>
+    <fluent-card class="packages">
+      <fluent-data-grid id="packageGrid" role="grid" grid-template-columns="1fr 100px 285px">
+        <fluent-data-grid-row row-type="header">
+          <fluent-data-grid-cell cell-type="columnheader" grid-column="1">
+            Name
+          </fluent-data-grid-cell>
+          <fluent-data-grid-cell cell-type="columnheader" grid-column="2">
+            Auther
+          </fluent-data-grid-cell>
+          <fluent-data-grid-cell cell-type="columnheader" grid-column="3">
+          </fluent-data-grid-cell>
+        </fluent-data-grid-row>
+        <fluent-data-grid-row data-package-name="Raz's VPM Repo" data-package-id="https://vpm.razgriz.one/index.json">
+          <fluent-data-grid-cell grid-column="1">
+            <div class="col">
+              <div class="packageName">Raz's VPM Repo</div>
+              <div class="caption1">유니티 삶의 질을 위한 하모니 기반 애니메이터 확장 에디터 RATS 등</div>
+              <div class="caption2">https://vpm.razgriz.one/index.json</div>
+            </div>
+          </fluent-data-grid-cell>
+          <fluent-data-grid-cell grid-column="2" class="row align-items-center">
+            Raz
+          </fluent-data-grid-cell>
+          <fluent-data-grid-cell grid-column="3" class="row align-items-center justify-content-end">
+            <fluent-button appearance="accent" class="rowAddToVccButton" data-package-id="https://vpm.razgriz.one/index.json">Add to VCC</fluent-button>
+            <fluent-button class="rowVccUrlCopy ms-2" data-package-id="https://vpm.razgriz.one/index.json">
+              <svg slot="start" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 2C6.89543 2 6 2.89543 6 4V14C6 15.1046 6.89543 16 8 16H14C15.1046 16 16 15.1046 16 14V4C16 2.89543 15.1046 2 14 2H8ZM7 4C7 3.44772 7.44772 3 8 3H14C14.5523 3 15 3.44772 15 4V14C15 14.5523 14.5523 15 14 15H8C7.44772 15 7 14.5523 7 14V4ZM4 6.00001C4 5.25973 4.4022 4.61339 5 4.26758V14.5C5 15.8807 6.11929 17 7.5 17H13.7324C13.3866 17.5978 12.7403 18 12 18H7.5C5.567 18 4 16.433 4 14.5V6.00001Z"/>
+              </svg>
+              Copy
+            </fluent-button>
+            <fluent-button title="Repos Info" class="rowPackageInfoButton ms-2" data-package-id="https://vpm.razgriz.one/index.json">
+              <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.4921 8.91012C10.4497 8.67687 10.2456 8.49999 10.0001 8.49999C9.72397 8.49999 9.50011 8.72385 9.50011 8.99999V13.5021L9.50817 13.592C9.55051 13.8253 9.75465 14.0021 10.0001 14.0021C10.2763 14.0021 10.5001 13.7783 10.5001 13.5021V8.99999L10.4921 8.91012ZM10.7988 6.74999C10.7988 6.33578 10.463 5.99999 10.0488 5.99999C9.63461 5.99999 9.29883 6.33578 9.29883 6.74999C9.29883 7.16421 9.63461 7.49999 10.0488 7.49999C10.463 7.49999 10.7988 7.16421 10.7988 6.74999ZM18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10ZM3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10Z"/>
+              </svg>
+            </fluent-button>
+          </fluent-data-grid-cell>
+        </fluent-data-grid-row>
+        <fluent-data-grid-row data-package-name="anatawa12" data-package-id="https://vpm.anatawa12.com/vpm.json">
+          <fluent-data-grid-cell grid-column="1">
+            <div class="col">
+              <div class="packageName">anatawa12</div>
+              <div class="caption1">비파괴적 최적화 툴과, 여러 아바타를 한번에 업로드 해주는 툴 등</div>
+              <div class="caption2">https://vpm.anatawa12.com/vpm.json</div>
+            </div>
+          </fluent-data-grid-cell>
+          <fluent-data-grid-cell grid-column="2" class="row align-items-center">
+            anatawa12
+          </fluent-data-grid-cell>
+          <fluent-data-grid-cell grid-column="3" class="row align-items-center justify-content-end">
+            <fluent-button appearance="accent" class="rowAddToVccButton" data-package-id="https://vpm.anatawa12.com/vpm.json">Add to VCC</fluent-button>
+            <fluent-button class="rowVccUrlCopy ms-2" data-package-id="https://vpm.anatawa12.com/vpm.json">
+              <svg slot="start" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 2C6.89543 2 6 2.89543 6 4V14C6 15.1046 6.89543 16 8 16H14C15.1046 16 16 15.1046 16 14V4C16 2.89543 15.1046 2 14 2H8ZM7 4C7 3.44772 7.44772 3 8 3H14C14.5523 3 15 3.44772 15 4V14C15 14.5523 14.5523 15 14 15H8C7.44772 15 7 14.5523 7 14V4ZM4 6.00001C4 5.25973 4.4022 4.61339 5 4.26758V14.5C5 15.8807 6.11929 17 7.5 17H13.7324C13.3866 17.5978 12.7403 18 12 18H7.5C5.567 18 4 16.433 4 14.5V6.00001Z"/>
+              </svg>
+              Copy
+            </fluent-button>
+            <fluent-button title="Repos Info" class="rowPackageInfoButton ms-2" data-package-id="https://vpm.anatawa12.com/vpm.json">
+              <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.4921 8.91012C10.4497 8.67687 10.2456 8.49999 10.0001 8.49999C9.72397 8.49999 9.50011 8.72385 9.50011 8.99999V13.5021L9.50817 13.592C9.55051 13.8253 9.75465 14.0021 10.0001 14.0021C10.2763 14.0021 10.5001 13.7783 10.5001 13.5021V8.99999L10.4921 8.91012ZM10.7988 6.74999C10.7988 6.33578 10.463 5.99999 10.0488 5.99999C9.63461 5.99999 9.29883 6.33578 9.29883 6.74999C9.29883 7.16421 9.63461 7.49999 10.0488 7.49999C10.463 7.49999 10.7988 7.16421 10.7988 6.74999ZM18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10ZM3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10Z"/>
+              </svg>
+            </fluent-button>
+          </fluent-data-grid-cell>
+        </fluent-data-grid-row>
+        <fluent-data-grid-row data-package-name="lilxyzw" data-package-id="https://lilxyzw.github.io/vpm-repos/vpm.json">
+          <fluent-data-grid-cell grid-column="1">
+            <div class="col">
+              <div class="packageName">lilxyzw</div>
+              <div class="caption1">VRChat에서 가장 대중적인 다기능 셰이더 릴툰과, 아바타 셋업 수정시 사용하면 좋은 여러 유틸리티</div>
+              <div class="caption2">https://lilxyzw.github.io/vpm-repos/vpm.json</div>
+            </div>
+          </fluent-data-grid-cell>
+          <fluent-data-grid-cell grid-column="2" class="row align-items-center">
+            lilxyzw
+          </fluent-data-grid-cell>
+          <fluent-data-grid-cell grid-column="3" class="row align-items-center justify-content-end">
+            <fluent-button appearance="accent" class="rowAddToVccButton" data-package-id="https://lilxyzw.github.io/vpm-repos/vpm.json">Add to VCC</fluent-button>
+            <fluent-button class="rowVccUrlCopy ms-2" data-package-id="https://lilxyzw.github.io/vpm-repos/vpm.json">
+              <svg slot="start" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 2C6.89543 2 6 2.89543 6 4V14C6 15.1046 6.89543 16 8 16H14C15.1046 16 16 15.1046 16 14V4C16 2.89543 15.1046 2 14 2H8ZM7 4C7 3.44772 7.44772 3 8 3H14C14.5523 3 15 3.44772 15 4V14C15 14.5523 14.5523 15 14 15H8C7.44772 15 7 14.5523 7 14V4ZM4 6.00001C4 5.25973 4.4022 4.61339 5 4.26758V14.5C5 15.8807 6.11929 17 7.5 17H13.7324C13.3866 17.5978 12.7403 18 12 18H7.5C5.567 18 4 16.433 4 14.5V6.00001Z"/>
+              </svg>
+              Copy
+            </fluent-button>
+            <fluent-button title="Repos Info" class="rowPackageInfoButton ms-2" data-package-id="https://lilxyzw.github.io/vpm-repos/vpm.json">
+              <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.4921 8.91012C10.4497 8.67687 10.2456 8.49999 10.0001 8.49999C9.72397 8.49999 9.50011 8.72385 9.50011 8.99999V13.5021L9.50817 13.592C9.55051 13.8253 9.75465 14.0021 10.0001 14.0021C10.2763 14.0021 10.5001 13.7783 10.5001 13.5021V8.99999L10.4921 8.91012ZM10.7988 6.74999C10.7988 6.33578 10.463 5.99999 10.0488 5.99999C9.63461 5.99999 9.29883 6.33578 9.29883 6.74999C9.29883 7.16421 9.63461 7.49999 10.0488 7.49999C10.463 7.49999 10.7988 7.16421 10.7988 6.74999ZM18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10ZM3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10Z"/>
+              </svg>
+            </fluent-button>
+          </fluent-data-grid-cell>
+        </fluent-data-grid-row>
+
+      </fluent-data-grid>
+    </fluent-card>
+  </div>
+  <script type="module">
+    import { baseLayerLuminance, StandardLuminance } from 'https://unpkg.com/@fluentui/web-components';
+
+const PACKAGES = {
+  "https://vpm.razgriz.one/index.json": {
+    name: "https://vpm.razgriz.one/index.json",
+    displayName: "Raz's VPM Repo",
+    description: "유니티 삶의 질을 위한 하모니 기반 애니메이터 확장 에디터 RATS 등",
+    packages: "RATS, Harmony",
+    author: {
+      name: "Raz",
+      url: "https://github.com/rrazgriz",
+    },
+    dependencies: {
+    },
+    keywords: [
+    ],
+  },
+  "https://vpm.anatawa12.com/vpm.json": {
+    name: "https://vpm.anatawa12.com/vpm.json",
+    displayName: "anatawa12",
+    description: "비파괴적 최적화 툴과, 여러 아바타를 한번에 업로드 해주는 툴 등",
+    packages: "Anatawa12's AvatarOptimizer, Continuous Avatar Uploader, CustomLocalization4EditorExtension, anatawa12's gists pack, VPMPackageAutoInstaller Creator, Harmony bug Fix, anatawa12's fork of Av3Emulator, AnimatorController as a Code",
+    author: {
+      name: "anatawa12",
+      url: "https://github.com/anatawa12",
+    },
+    dependencies: {
+    },
+    keywords: [
+    ],
+  },
+  "https://lilxyzw.github.io/vpm-repos/vpm.json": {
+    name: "https://lilxyzw.github.io/vpm-repos/vpm.json",
+    displayName: "lilxyzw",
+    description: "VRChat에서 가장 대중적인 다기능 셰이더 릴툰과, 아바타 셋업 수정시 사용하면 좋은 여러 유틸리티",
+    packages: "lilToon, lilAvatarUtils",
+    author: {
+      name: "lilxyzw",
+      url: "https://github.com/lilxyzw",
+    },
+    dependencies: {
+    },
+    keywords: [
+    ],
+  },
+};
+
+const setTheme = () => {
+  const isDarkTheme = () => window.matchMedia("(prefers-color-scheme: dark)").matches;
+  if (isDarkTheme()) {
+    baseLayerLuminance.setValueFor(document.documentElement, StandardLuminance.DarkMode);
+  } else {
+    baseLayerLuminance.setValueFor(document.documentElement, StandardLuminance.LightMode);
+  }
+}
+
+(() => {
+  setTheme();
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+    setTheme();
+  });
+
+  const packageGrid = document.getElementById('packageGrid');
+
+  const searchInput = document.getElementById('searchInput');
+  searchInput.addEventListener('input', ({ target: { value = '' }}) => {
+    const items = packageGrid.querySelectorAll('fluent-data-grid-row[row-type="default"]');
+    items.forEach(item => {
+      if (value === '') {
+        item.style.display = 'grid';
+        return;
+      }
+      if (
+        item.dataset?.packageName?.toLowerCase()?.includes(value.toLowerCase()) ||
+        item.dataset?.packageId?.toLowerCase()?.includes(value.toLowerCase())
+      ) {
+        item.style.display = 'grid';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  });
+
+  const urlBarHelpButton = document.getElementById('urlBarHelp');
+  const addListingToVccHelp = document.getElementById('addListingToVccHelp');
+  urlBarHelpButton.addEventListener('click', () => {
+    addListingToVccHelp.hidden = false;
+  });
+  const addListingToVccHelpClose = document.getElementById('addListingToVccHelpClose');
+  addListingToVccHelpClose.addEventListener('click', () => {
+    addListingToVccHelp.hidden = true;
+  });
+
+  const packageInfoModal = document.getElementById('packageInfoModal');
+  const packageInfoModalClose = document.getElementById('packageInfoModalClose');
+  packageInfoModalClose.addEventListener('click', () => {
+    packageInfoModal.hidden = true;
+  });
+
+  // Fluent dialogs use nested shadow-rooted elements, so we need to use JS to style them
+  const modalControl = packageInfoModal.shadowRoot.querySelector('.control');
+  modalControl.style.maxHeight = "90%";
+  modalControl.style.transition = 'height 0.2s ease-in-out';
+  modalControl.style.overflowY = 'hidden';
+
+  const packageInfoName = document.getElementById('packageInfoName');
+  const packageInfoId = document.getElementById('packageInfoId');
+  const packageInfoDescription = document.getElementById('packageInfoDescription');
+  const packageInfoAuthor = document.getElementById('packageInfoAuthor');
+  const packageInfoDependencies = document.getElementById('packageInfoDependencies');
+  const packageInfoKeywords = document.getElementById('packageInfoKeywords');
+  const packagesInfo = document.getElementById('packagesInfo');
+
+  const rowAddToVccButtons = document.querySelectorAll('.rowAddToVccButton');
+  rowAddToVccButtons.forEach((button) => {
+      button.addEventListener('click', e => {
+      const packageId = e.target.dataset?.packageId;
+      const packageInfo = PACKAGES?.[packageId];
+      if (!packageInfo) {
+        console.error(`Did not find package ${packageId}. Packages available:`, PACKAGES);
+        return;
+      }
+
+      packageInfoName.textContent = packageInfo.displayName;
+      packageInfoId.textContent = packageId;
+    });
+    button.addEventListener('click', () => window.location.assign(`vcc://vpm/addRepo?url=${encodeURIComponent(packageInfoId.textContent)}`));
+  });
+  const rowVccUrlCopy = document.querySelectorAll('.rowVccUrlCopy');
+
+  rowVccUrlCopy.forEach((button) => {
+      button.addEventListener('click', e => {
+      const packageId = e.target.dataset?.packageId;
+      const packageInfo = PACKAGES?.[packageId];
+      if (!packageInfo) {
+        console.error(`Did not find package ${packageId}. Packages available:`, PACKAGES);
+        return;
+      }
+
+      packageInfoName.textContent = packageInfo.displayName;
+      packageInfoId.textContent = packageId;
+    });
+    button.addEventListener('click', () => {
+      navigator.clipboard.writeText(packageInfoId.textContent);
+      rowVccUrlCopy.appearance = 'accent';
+      setTimeout(() => {
+        rowVccUrlCopy.appearance = 'neutral';
+      }, 1000);
+    });
+  });
+
+
+  const rowPackageInfoButton = document.querySelectorAll('.rowPackageInfoButton');
+  rowPackageInfoButton.forEach((button) => {
+    button.addEventListener('click', e => {
+      const packageId = e.target.dataset?.packageId;
+      const packageInfo = PACKAGES?.[packageId];
+      if (!packageInfo) {
+        console.error(`Did not find package ${packageId}. Packages available:`, PACKAGES);
+        return;
+      }
+
+      packageInfoName.textContent = packageInfo.displayName;
+      packageInfoId.textContent = packageId;
+      packageInfoDescription.textContent = packageInfo.description;
+      packageInfoAuthor.textContent = packageInfo.author.name;
+      packageInfoAuthor.href = packageInfo.author.url;
+
+      if ((packageInfo.keywords?.length ?? 0) === 0) {
+        packageInfoKeywords.parentElement.classList.add('hidden');
+      } else {
+        packageInfoKeywords.parentElement.classList.remove('hidden');
+        packageInfoKeywords.innerHTML = null;
+        packageInfo.keywords.forEach(keyword => {
+          const keywordDiv = document.createElement('div');
+          keywordDiv.classList.add('me-2', 'mb-2', 'badge');
+          keywordDiv.textContent = keyword;
+          packageInfoKeywords.appendChild(keywordDiv);
+        });
+      }
+
+        packagesInfo.textContent = packageInfo.packages;
+
+      packageInfoDependencies.innerHTML = null;
+      Object.entries(packageInfo.dependencies).forEach(([name, version]) => {
+        const depRow = document.createElement('li');
+        depRow.classList.add('mb-2');
+        depRow.textContent = `${name} @ v${version}`;
+        packageInfoDependencies.appendChild(depRow);
+      });
+
+      packageInfoModal.hidden = false;
+
+      setTimeout(() => {
+        const height = packageInfoModal.querySelector('.col').clientHeight;
+        modalControl.style.setProperty('--dialog-height', `${height + 14}px`);
+      }, 1);
+    });
+  });
+})();
+  </script>
+</body>
+</html>
